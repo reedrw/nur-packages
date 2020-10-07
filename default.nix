@@ -14,6 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  artwiz-lemon = pkgs.callPackage ./pkgs/artwiz-lemon { };
   r2mod_cli = pkgs.callPackage ./pkgs/r2mod_cli { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
