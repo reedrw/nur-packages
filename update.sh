@@ -20,4 +20,4 @@
 #
 
 # just testing this
-nix-prefetch '(import ./. {}).r2mod_cli'
+nix-prefetch '(import ./. {}).r2mod_cli' --verbose
