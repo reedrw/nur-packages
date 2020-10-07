@@ -1,12 +1,12 @@
-{ stdenv }:
+{ stdenv, fetchurl }:
 
 stdenv.mkDerivation rec {
   pname = "scientifica";
   version = "2.1";
 
-  src = builtins.fetchTarball {
+  src = fetchurl {
     url = "https://github.com/NerdyPepper/scientifica/releases/download/v${version}/scientifica-v${version}.tar";
-    sha256 = "1mji70h5qdplx0rlhijrdpbmvd0c6fvnr70sla032gfs5g6f78cn";
+    sha256 = "1djsgv6sgfw4kay6wbks3yqgrmbyyxq4i21aqg1hj0w5ww4wwn9i";
   };
 
   installPhase = ''
