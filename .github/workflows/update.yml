@@ -26,19 +26,22 @@ jobs:
       run:
         sudo systemctl restart nix-daemon
 
-    - name: Update packages
-      run: ./update.sh
+    - run:
+      nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixpkgs-unstable.tar.gz test.nix --run 'true'
 
-    - name: Commit and Push
-      uses: EndBug/add-and-commit@v5
-      with:
-        author_name: GitHub Action
-        author_email: action@github.com
-        message: "automated update"
-        add: "--all"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Update packages
+    #  run: ./update.sh
 
-    - name: Update NUR
-      run: curl -XPOST https://nur-update.herokuapp.com/update?repo=reedrw
+    #- name: Commit and Push
+    #  uses: EndBug/add-and-commit@v5
+    #  with:
+    #    author_name: GitHub Action
+    #    author_email: action@github.com
+    #    message: "automated update"
+    #    add: "--all"
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    #- name: Update NUR
+    #  run: curl -XPOST https://nur-update.herokuapp.com/update?repo=reedrw
 
