@@ -18,10 +18,16 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2.3.3
 
+    - name: Prevent garbage collections of gcroots
+      run:
+        printf "keep-outputs = true\nkeep-derivations = true\n" | sudo tee -a /etc/nix/nix.conf;
+
+    - name: Restart nix-daemon with systemctl
+      run:
+        sudo systemctl restart nix-daemon
+
     - name: Update packages
       run: ./update.sh
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Commit and Push
       uses: EndBug/add-and-commit@v5
