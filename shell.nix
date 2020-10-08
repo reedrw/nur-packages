@@ -13,7 +13,7 @@ in
 pkgs.mkShell {
 
   buildInputs = [
-    (import nix-update-master {})
+    #(import nix-update-master {})
     pkgs.nix-prefetch-github
     pkgs.nix-prefetch
   ];
