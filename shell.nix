@@ -10,13 +10,21 @@ nix-prefetch-master = pkgs.fetchFromGitHub {
 };
 nix-prefetch-release = "${nix-prefetch-master}/release.nix";
 
+nix-update-fixed = pkgs.nix-update.overrideAttrs (
+  old: rec {
+    makeWrapperArgs = [
+      "--prefix" "PATH" ":" (lib.makeBinPath [nix nix-prefetch-release])
+    ];
+  }
+);
+
+
 in
 pkgs.mkShell {
 
   buildInputs = [
-    #pkgs.nix-update
-    #pkgs.nix-prefetch-github
-    (import nix-prefetch-release {})
+    nix-update-fixed
+    pkgs.nix-prefetch-github
   ];
 
 }
