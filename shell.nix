@@ -16,6 +16,14 @@ pkgs.mkShell {
     #(import nix-update-master {})
     pkgs.nix-prefetch-github
     pkgs.nix-prefetch
+    coreutils
+    bash
+    gawk
+    gnugrep
+    gnused
+    jq
+    nix
+    git
   ];
 
 }
