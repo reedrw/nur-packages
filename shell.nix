@@ -1,29 +1,22 @@
 with import <nixpkgs> {};
 
 let
-  
-nix-update-master = pkgs.fetchFromGitHub {
-  owner = "Mic92";
-  repo = "nix-update";
-  rev = "04a051c4f91781c27003228e8a16592c730ba5f1";
-  sha256 = "18snrx829wcnddivbzxp9qvdfwxpbd9pw89xafhdynv2c8pmvs6y";
+
+nix-prefetch-master = pkgs.fetchFromGitHub {
+  owner = "msteen";
+  repo = "nix-prefetch";
+  rev = "6bda3ef3862173b3dabff3c2668add795f982572";
+  sha256 = "1qw7ifc4syh8xprfcnj4kc7brx4x7bd0584sskgc1b3cpjnq5qs2";
 };
+nix-prefetch-release = "${nix-prefetch-master}/release.nix";
 
 in
 pkgs.mkShell {
 
   buildInputs = [
-    #(import nix-update-master {})
-    pkgs.nix-prefetch-github
-    pkgs.nix-prefetch
-    coreutils
-    bash
-    gawk
-    gnugrep
-    gnused
-    jq
-    nix
-    git
+    #pkgs.nix-update
+    #pkgs.nix-prefetch-github
+    (import nix-prefetch-release {})
   ];
 
 }
