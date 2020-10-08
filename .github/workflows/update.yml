@@ -26,8 +26,8 @@ jobs:
       run:
         sudo systemctl restart nix-daemon
 
-    - run:
-      nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixpkgs-unstable.tar.gz test.nix --run 'true'
+    - name: Run tests
+      run: nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs-channels/archive/nixpkgs-unstable.tar.gz test.nix --run 'true'
 
     #- name: Update packages
     #  run: ./update.sh
