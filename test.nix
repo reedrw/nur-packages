@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 mkShell {
   nativeBuildInputs = [
-    coreutils bash gawk gnugrep gnused jq nix git
+    coreutils bash gawk gnugrep gnused jq nix git nix-prefetch
   ];
 
   shellHook = ''
