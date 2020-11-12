@@ -130,7 +130,7 @@ jobs:
         path: ~/artifact/update.diff
 
     - name: Check if anything was updated
-      run: [ -s ~/artifact/update.diff/update.diff ]
+      run: "[ -s ~/artifact/update.diff/update.diff ]"
 
     - name: Get workflow conclusion
       uses: technote-space/workflow-conclusion-action@v2.0.1
