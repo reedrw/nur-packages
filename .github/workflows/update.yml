@@ -116,3 +116,17 @@ jobs:
     - name: Update NUR
       run: curl -XPOST "https://nur-update.herokuapp.com/update?repo=${{ matrix.nurRepo }}"
 
+  telegram:
+    name: Telegram
+    needs: push
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - uses: technote-space/workflow-conclusion-action@v2.0.1
+      - uses: yanzay/notify-telegram@v0.1.0
+        with:
+          chat: ${{ secrets.NOTIFICATION_CHAT_ID }}
+          token: ${{ secrets.NOTIFICATION_TOKEN }}
+          status: ${{ env.WORKFLOW_CONCLUSION }}
+        if: env.WORKFLOW_CONCLUSION != 'success'
+
