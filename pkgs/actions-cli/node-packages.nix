@@ -607,22 +607,22 @@ let
         sha512 = "NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==";
       };
     };
-    "@types/node-12.19.6" = {
+    "@types/node-12.19.7" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "12.19.6";
+      version = "12.19.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-12.19.6.tgz";
-        sha512 = "U2VopDdmBoYBmtm8Rz340mvvSz34VgX/K9+XCuckvcLGMkt3rbMX8soqFOikIPlPBc5lmw8By9NUK7bEFSBFlQ==";
+        url = "https://registry.npmjs.org/@types/node/-/node-12.19.7.tgz";
+        sha512 = "zvjOU1g4CpPilbTDUATnZCUb/6lARMRAqzT7ILwl1P3YvU2leEcZ2+fw9+Jrw/paXB1CgQyXTrN4hWDtqT9O2A==";
       };
     };
-    "@types/node-13.13.32" = {
+    "@types/node-13.13.33" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "13.13.32";
+      version = "13.13.33";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-13.13.32.tgz";
-        sha512 = "sPBvDnrwZE1uePhkCEyI/qQlgZM5kePPAhHIFDWNsOrWBFRBOk3LKJYmVCLeLZlL9Ub/FzMJb31OTWCg2F+06g==";
+        url = "https://registry.npmjs.org/@types/node/-/node-13.13.33.tgz";
+        sha512 = "1B3GM1yuYsFyEvBb+ljBqWBOylsWDYioZ5wpu8AhXdIhq20neXS7eaSC8GkwHE0yQYGiOIV43lMsgRYTgKZefQ==";
       };
     };
     "@types/node-fetch-2.5.7" = {
@@ -4143,7 +4143,7 @@ in
       sources."@types/memoizee-0.4.5"
       sources."@types/mime-2.0.3"
       sources."@types/mocha-5.2.7"
-      sources."@types/node-12.19.6"
+      sources."@types/node-12.19.7"
       sources."@types/node-fetch-2.5.7"
       sources."@types/qs-6.9.5"
       sources."@types/range-parser-1.2.3"
@@ -4513,7 +4513,7 @@ in
       sources."promise-polyfill-8.1.3"
       (sources."protobufjs-6.10.2" // {
         dependencies = [
-          sources."@types/node-13.13.32"
+          sources."@types/node-13.13.33"
         ];
       })
       sources."proxy-addr-2.0.6"
