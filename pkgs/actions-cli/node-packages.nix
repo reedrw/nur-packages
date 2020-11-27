@@ -1507,13 +1507,13 @@ let
         sha512 = "6u0VYSCo/OW6IoD5WCLLy9JUGARbamfSavcNXry/eu8aHVFei6CD3Sw+VGX5alea1i9pgPHW0mbu6Xj0uBh7gA==";
       };
     };
-    "es-abstract-1.17.7" = {
+    "es-abstract-1.18.0-next.1" = {
       name = "es-abstract";
       packageName = "es-abstract";
-      version = "1.17.7";
+      version = "1.18.0-next.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.17.7.tgz";
-        sha512 = "VBl/gnfcJ7OercKA9MVaegWsBHFjV492syMudcnQZvt/Dw8ezpcOHYZXa/J96O8vx+g4x65YKhxOwDUh63aS5g==";
+        url = "https://registry.npmjs.org/es-abstract/-/es-abstract-1.18.0-next.1.tgz";
+        sha512 = "I4UGspA0wpZXWENrdA0uHbnhte683t3qT/1VFH9aX2dA5PPSf6QW5HHXf5HImaqPmjXaVeVk4RGWnaylmV7uAA==";
       };
     };
     "es-to-primitive-1.2.1" = {
@@ -2180,6 +2180,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/is-interactive/-/is-interactive-1.0.0.tgz";
         sha512 = "2HvIEKRoqS62guEC+qBjpvRubdX910WCMuJTZ+I9yvqKU2/12eSL549HMwtabb4oupdj2sMP50k+XJfB/8JE6w==";
+      };
+    };
+    "is-negative-zero-2.0.0" = {
+      name = "is-negative-zero";
+      packageName = "is-negative-zero";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.0.tgz";
+        sha1 = "9553b121b0fac28869da9ed459e20c7543788461";
       };
     };
     "is-obj-2.0.0" = {
@@ -2974,13 +2983,13 @@ let
         sha512 = "ixT2L5THXsApyiUPYKmW+2EHpXXe5Ii3M+f4e+aJFAHao5amFRW6J0OO6c/LU8Be47utCx2GL89hxGB6XSmKuQ==";
       };
     };
-    "object.getownpropertydescriptors-2.1.0" = {
+    "object.getownpropertydescriptors-2.1.1" = {
       name = "object.getownpropertydescriptors";
       packageName = "object.getownpropertydescriptors";
-      version = "2.1.0";
+      version = "2.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.1.0.tgz";
-        sha512 = "Z53Oah9A3TdLoblT7VKJaTDdXdT+lQO+cNpKVnya5JDe9uLvzu1YyY1yFDFrcxrlRgWrEFH0jJtD/IbuwjcEVg==";
+        url = "https://registry.npmjs.org/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.1.1.tgz";
+        sha512 = "6DtXgZ/lIZ9hqx4GtZETobXLR/ZLaa0aqV0kzbn80Rf8Z2e/XFnhA0I7p07N2wH8bBBltr2xQPi6sbKWAY2Eng==";
       };
     };
     "on-finished-2.3.0" = {
@@ -4252,7 +4261,7 @@ in
       })
       sources."end-of-stream-1.4.4"
       sources."env-paths-2.2.0"
-      (sources."es-abstract-1.17.7" // {
+      (sources."es-abstract-1.18.0-next.1" // {
         dependencies = [
           sources."object.assign-4.1.2"
         ];
@@ -4356,6 +4365,7 @@ in
       sources."is-date-object-1.0.2"
       sources."is-fullwidth-code-point-3.0.0"
       sources."is-interactive-1.0.0"
+      sources."is-negative-zero-2.0.0"
       sources."is-obj-2.0.0"
       sources."is-plain-object-5.0.0"
       sources."is-promise-2.2.2"
@@ -4476,7 +4486,7 @@ in
       sources."object-inspect-1.8.0"
       sources."object-keys-1.1.1"
       sources."object.assign-4.1.0"
-      sources."object.getownpropertydescriptors-2.1.0"
+      sources."object.getownpropertydescriptors-2.1.1"
       sources."on-finished-2.3.0"
       sources."once-1.4.0"
       sources."one-time-1.0.0"
