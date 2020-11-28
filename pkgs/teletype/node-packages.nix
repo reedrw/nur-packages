@@ -1831,13 +1831,13 @@ let
         sha512 = "nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==";
       };
     };
-    "prettier-2.2.0" = {
+    "prettier-2.2.1" = {
       name = "prettier";
       packageName = "prettier";
-      version = "2.2.0";
+      version = "2.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/prettier/-/prettier-2.2.0.tgz";
-        sha512 = "yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==";
+        url = "https://registry.npmjs.org/prettier/-/prettier-2.2.1.tgz";
+        sha512 = "PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==";
       };
     };
     "pump-3.0.0" = {
@@ -2903,7 +2903,7 @@ in
         ];
       })
       sources."pkg-up-3.1.0"
-      sources."prettier-2.2.0"
+      sources."prettier-2.2.1"
       sources."pump-3.0.0"
       sources."punycode-2.1.1"
       (sources."qqjs-0.3.11" // {
