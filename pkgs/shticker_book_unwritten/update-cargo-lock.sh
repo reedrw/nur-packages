@@ -1,5 +1,5 @@
 #! /usr/bin/env nix-shell
-#! nix-shell -i bash -p jq
+#! nix-shell ../../shell.nix -i bash
 
 set -eu -o verbose
 
