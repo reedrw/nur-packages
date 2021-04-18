@@ -36,7 +36,7 @@ jobs:
         nix_path: "${{ matrix.nixPath }}"
 
     - name: Install Cachix
-      uses: cachix/cachix-action@v8
+      uses: cachix/cachix-action@v10
       if: ${{ matrix.cachixName != '<YOUR_CACHIX_NAME>' }}
       with:
         name: ${{ matrix.cachixName }}
