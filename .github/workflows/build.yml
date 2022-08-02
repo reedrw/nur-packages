@@ -53,6 +53,8 @@ jobs:
 
     - name: Build nix packages
       run: nix shell -f '<nixpkgs>' nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs
+      env:
+        NIXPKGS_ALLOW_UNFREE: 1
 
   update:
     if: github.event_name != 'pull_request'
