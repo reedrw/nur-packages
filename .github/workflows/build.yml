@@ -66,14 +66,19 @@ jobs:
     - name: Trigger NUR update
       if: ${{ matrix.nurRepo != '<YOUR_REPO_NAME>' }}
       run: |
-        until [[ $(curl -XPOST "https://nur-update.herokuapp.com/update?repo=${{ matrix.nurRepo }}") == "" ]]; do
-          echo "Failed, waiting 1 minute"
+        set -x
+        i=0
+        until [[ $(curl -XPOST "https://nur-update.herokuapp.com/update?repo=${{ matrix.nurRepo }}") == "" ]] || [ "$i" -eq 10 ]; do
+          echo "Attempt $i/10 failed, waiting 1 minute"
           sleep 60
+          i=$((i+1))
         done
+
+        [ "$i" -eq 10 ] && exit 1
 
   telegram:
     name: Telegram
-    needs: tests
+    needs: update
     runs-on: ubuntu-latest
     if: always()
     steps:
