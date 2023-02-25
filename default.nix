@@ -16,6 +16,7 @@ rec {
 
   artwiz-lemon = pkgs.callPackage ./pkgs/artwiz-lemon { };
   bitwarden-rofi = pkgs.callPackage ./pkgs/bitwarden-rofi { };
+  genshin-account-switcher = pkgs.callPackage ./pkgs/genshin-account-switcher { };
   picom-next-ibhagwan = pkgs.callPackage ./pkgs/picom-next-ibhagwan { };
   rctpm = pkgs.callPackage ./pkgs/rctpm { };
   shairport-sync-metadata-reader = pkgs.callPackage ./pkgs/shairport-sync-metadata-reader { };
