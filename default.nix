@@ -21,7 +21,6 @@ rec {
   shairport-sync-metadata-reader = pkgs.callPackage ./pkgs/shairport-sync-metadata-reader { };
   toonmux = pkgs.callPackage ./pkgs/toonmux { };
   uxplay = pkgs.callPackage ./pkgs/uxplay { };
-  viddy = pkgs.callPackage ./pkgs/viddy { };
   jkps = pkgs.callPackage ./pkgs/jkps { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
