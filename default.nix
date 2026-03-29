@@ -16,7 +16,6 @@
 
   artwiz-lemon = pkgs.callPackage ./pkgs/artwiz-lemon { };
   bitwarden-rofi = pkgs.callPackage ./pkgs/bitwarden-rofi { };
-  jkps = pkgs.callPackage ./pkgs/jkps { };
   rctpm = pkgs.callPackage ./pkgs/rctpm { };
   shairport-sync-metadata-reader = pkgs.callPackage ./pkgs/shairport-sync-metadata-reader { };
   toonmux = pkgs.callPackage ./pkgs/toonmux { };
